@@ -85,7 +85,7 @@ add Master1 IP into /etc/hossts (Later you can modify cluster-endpoint to point 
 
 kubeadm init --control-plane-endpoint="cluster-endpoint" --upload-certs --pod-network-cidr=172.16.0.0/16 --ignore-preflight-errors=NumCPU --ignore-preflight-errors=Mem
 
-mkdir $HOME/.kube
+mkdir -p $HOME/.kube
 cp -i /etc/kubernetes/admin.conf $HOME/.kube/config
 sudo chown $(id -u):$(id -g) $HOME/.kube/config
 
